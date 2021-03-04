@@ -1,0 +1,132 @@
+﻿div {
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+    font-size: 25px;
+}
+
+#listak {
+    background-color: lightgrey;
+    font-style: italic;
+    text-align:left;
+}
+
+.megisfeher {
+    background-color: white;
+    width: 120px;
+    border-radius: 15px;
+}
+
+.sorrendi {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bold;
+    text-align: center;
+}
+
+#article,#aside,#footer,#header,#nav {
+    padding: 20px;
+}
+
+#header {
+    background-color: red;
+}
+
+#nav {
+    background: deepskyblue;
+}
+
+#article {
+    text-align: left;
+    background: gold;
+}
+
+#aside {
+    background-color: lightgreen;
+    max-width:60%;
+}
+
+#footer {
+    background: hotpink;
+}
+
+/* menü */
+#nav {
+    display: flex;
+}
+
+    #nav a {
+        /* ugyanaz, mint flex-grow:1; flex-shrink:1;flex-basis:auto;*/
+        flex: 1 1 auto;
+        text-decoration: none;
+        color: white;
+    }
+
+/* 800px-nél nagyobb képernyő*/
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #nav,#header {
+        order: -1;
+    }
+
+    #article {
+        flex: 1 1 75%;
+    }
+
+    #aside {
+        flex: 1 1 25%;
+    }
+}
